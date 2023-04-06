@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cpqX8LixluliXdN6XZX7yHmq5XKUIhwztyj4nyYrl85qwk9dr3vkOXcwiR32Ht3xrwHIZmp1jp8HSFm9EvHUIw==",
+  "dgSpecHash": "319BZVKZpmXTqR/e986BFqZrqmjP8LSRRW6n3q4mwXOZzJG7O8J3nrvGoL1Nhn3wdz3AFLEdGk0zJc9LKg8EmA==",
   "success": true,
   "projectFilePath": "/workspaces/ValheimDiscordLink/ValheimDiscordLink/ValheimPlugin.csproj",
   "expectedPackageFiles": [
@@ -75,16 +75,5 @@
     "/home/codespace/.nuget/packages/unityengine.modules/2020.3.46/unityengine.modules.2020.3.46.nupkg.sha512",
     "/home/codespace/.nuget/packages/valheim.gamelibs/0.202.14-r.0/valheim.gamelibs.0.202.14-r.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "com.bluetigeresw.valheimdiscordlink depends on UnityEngine.Modules (>= 2020.3.45.46) but UnityEngine.Modules 2020.3.45.46 was not found. An approximate best match of UnityEngine.Modules 2020.3.46 was resolved.",
-      "libraryId": "UnityEngine.Modules",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.6"
-      ]
-    }
-  ]
+  "logs": []
 }

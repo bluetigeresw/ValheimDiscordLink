@@ -65,7 +65,7 @@
             "UnityEngine.Modules": {
               "include": "Compile",
               "target": "Package",
-              "version": "[2020.3.45.46, )"
+              "version": "[2020.3.46, )"
             },
             "Valheim.GameLibs": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

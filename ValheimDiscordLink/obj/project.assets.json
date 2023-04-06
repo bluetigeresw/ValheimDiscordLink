@@ -3517,7 +3517,7 @@
       "BepInEx.PluginInfoProps >= 1.*",
       "Discord.Net >= 2.0.0",
       "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.2",
-      "UnityEngine.Modules >= 2020.3.45.46",
+      "UnityEngine.Modules >= 2020.3.46",
       "Valheim.GameLibs >= 0.202.14-r.0"
     ]
   },
@@ -3585,7 +3585,7 @@
           "UnityEngine.Modules": {
             "include": "Compile",
             "target": "Package",
-            "version": "[2020.3.45.46, )"
+            "version": "[2020.3.46, )"
           },
           "Valheim.GameLibs": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -3597,17 +3597,5 @@
         "runtimeIdentifierGraphPath": "/usr/local/dotnet/7.0.201/sdk/7.0.201/RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "com.bluetigeresw.valheimdiscordlink depends on UnityEngine.Modules (>= 2020.3.45.46) but UnityEngine.Modules 2020.3.45.46 was not found. An approximate best match of UnityEngine.Modules 2020.3.46 was resolved.",
-      "libraryId": "UnityEngine.Modules",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.6"
-      ]
-    }
-  ]
+  }
 }
