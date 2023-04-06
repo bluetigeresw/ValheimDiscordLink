@@ -8,7 +8,7 @@ using System.Text;
 namespace ValheimDiscordLink
 {
     [BepInPlugin("com.bluetigeresw.valheimdiscordlink", "Valheim Discord Link", "1.0.0")]
-    pubic class ValheimDiscordLink : BaseUnityPlugin
+    public class ValheimDiscordLink : BaseUnityPlugin
     {
         private static readonly HttpClient httpClient = new HttpClient();
 
