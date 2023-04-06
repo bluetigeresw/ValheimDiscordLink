@@ -8,12 +8,14 @@ using System.Text;
 namespace ValheimDiscordLink
 {
     [BepInPlugin("com.bluetigeresw.valheimdiscordlink", "Valheim Discord Link", "1.0.0")]
+    [BepInProcess("valheim.exe")]
     public class ValheimDiscordLink : BaseUnityPlugin
     {
         private static readonly HttpClient httpClient = new HttpClient();
 
         private void Awake()
         {
+            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
             Harmony harmony = new Harmony("com.bluetigeresw.valheimdiscordlink");
             harmony.PatchAll();
         }

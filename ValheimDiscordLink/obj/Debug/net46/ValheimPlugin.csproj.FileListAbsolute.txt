@@ -1,0 +1,6 @@
+/workspaces/ValheimDiscordLink/ValheimDiscordLink/obj/Debug/net46/ValheimPlugin.csproj.AssemblyReference.cache
+/workspaces/ValheimDiscordLink/ValheimDiscordLink/obj/Debug/net46/PluginInfo.cs
+/workspaces/ValheimDiscordLink/ValheimDiscordLink/obj/Debug/net46/ValheimPlugin.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/ValheimDiscordLink/ValheimDiscordLink/obj/Debug/net46/ValheimPlugin.AssemblyInfoInputs.cache
+/workspaces/ValheimDiscordLink/ValheimDiscordLink/obj/Debug/net46/ValheimPlugin.AssemblyInfo.cs
+/workspaces/ValheimDiscordLink/ValheimDiscordLink/obj/Debug/net46/ValheimPlugin.csproj.CoreCompileInputs.cache
