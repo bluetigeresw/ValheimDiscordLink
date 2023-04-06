@@ -55,12 +55,24 @@
             },
             "Discord.Net": {
               "target": "Package",
-              "version": "[2.0.0, )"
+              "version": "[3.10.0, )"
+            },
+            "Harmony": {
+              "target": "Package",
+              "version": "[0.3.0, )"
             },
             "Microsoft.NETFramework.ReferenceAssemblies": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "Newtonsoft.json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "UnityEngine": {
+              "target": "Package",
+              "version": "[5.6.1, )"
             },
             "UnityEngine.Modules": {
               "include": "Compile",

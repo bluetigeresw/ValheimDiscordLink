@@ -8,7 +8,7 @@ using System.Text;
 using Discord;
 using Discord.Webhook;
 using System;
-using Valheim;
+using Valheim.GameLibs;
 
 namespace ValheimDiscordLink
 {
