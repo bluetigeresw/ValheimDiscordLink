@@ -22,6 +22,7 @@
          private string _discordWebhookUrl;
          private string _discordChannelId;
          private string _discordCommandPrefix;
+         private string _discordBotToken;
          private List<string> _adminRoles;
          private string _lastPlayers;
  
@@ -34,6 +35,7 @@
              var config = new IniConfigSource(configFile);
  
              _discordWebhookUrl = config["Discord"]["WebhookUrl"];
+             _discordBotToken = config["Discord"]["BotToken"];
              _discordChannelId = config["Discord"]["ChannelId"];
              _discordCommandPrefix = config["Discord"]["CommandPrefix"];
  
@@ -56,8 +58,10 @@
          public void Start()
          {
              // Connect to the Discord bot and start listening for messages
-             _discordClient.LoginAsync(Discord.TokenType.Bot, "your-bot-token");
-             _discordClient.StartAsync();
+             //_discordClient.LoginAsync(Discord.TokenType.Bot, "your-bot-token");
+             //_discordClient.StartAsync();
+             await _discordClient.LoginAsync(Discord.TokenType.Bot, _discordBotToken);
+             await _discordClient.StartAsync();
          }
  
          public void Update()
@@ -85,7 +89,7 @@
              if (message.Channel.Id.ToString() == _discordChannelId)
              {
                  // Handle incoming messages from the configured Discord channel
-                 if (message.Content.StartsWith(_discordCommandPrefix))
+                 if (message.Content.Length > _discordCommandPrefix.Length && message.Content.StartsWith(_discordCommandPrefix))
                  {
                      string command = message.Content.Substring(_discordCommandPrefix.Length);
  
@@ -110,7 +114,7 @@
                              }
                              else
                              {
-                                 await message.Channel.SendMessageAsync("Invalid syntax. Usage: " + _commandPrefix + "kick <playername>");
+                                 await message.Channel.SendMessageAsync("Invalid syntax. Usage: " + _discordCommandPrefix + "kick <playername>");
                              }
                          }
                          else
@@ -119,11 +123,13 @@
                          }
                      }
                  }
- 
-                 // Send message from Discord to Valheim server chat
-                 string authorName = message.Author.Username;
-                 string messageContent = message.Content;
-                 ZRoutedRpc.instance.InvokeRoutedRPC(ZNet.instance.GetServerPeer().m_uid, "ChatMessage", authorName, messageContent);
+                 else
+                 {
+                     // Send message from Discord to Valheim server chat
+                     string authorName = message.Author.Username;
+                     string messageContent = message.Content;
+                     ZRoutedRpc.instance.InvokeRoutedRPC(ZNet.instance.GetServerPeer().m_uid, "ChatMessage", authorName, messageContent);
+                 }
              }
          }
  
