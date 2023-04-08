@@ -1,81 +1,97 @@
 using BepInEx;
 using HarmonyLib;
-using UnityEngine;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
-using Discord;
-using Discord.Webhook;
 using System;
-using Valheim.GameLibs;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Discord.Webhook;
+using Discord.WebSocket;
 
-namespace ValheimDiscordLink
+namespace ValheimDiscordPlugin
 {
-    [BepInPlugin("com.bluetigeresw.valheimdiscordlink", "Valheim Discord Link", "1.0.0")]
-    [BepInProcess("valheim.exe")]
-    public class ValheimDiscordLink : BaseUnityPlugin
+    [BepInPlugin("com.example.valheimdiscordplugin", "ValheimDiscordPlugin", "1.0.0")]
+    public class ValheimDiscordPlugin : BaseUnityPlugin
     {
-        private static readonly HttpClient httpClient = new HttpClient();
-        private DiscordWebhookClient _webhookClient;
+        private DiscordSocketClient _discordClient;
+        private DiscordWebhookClient _discordWebhookClient;
+        private string _discordWebhookUrl;
+        private string _discordChannelName;
 
-        private void Awake()
+        public void Awake()
         {
-            tring discordWebhookUrl = Config.Bind<string>("General", "DiscordWebhookUrl", "").Value;
-            if (string.IsNullOrEmpty(discordWebhookUrl))
-            {
-                Logger.LogError("DiscordWebhookUrl is not configured.");
-                return;
-            }
-
-            _webhookClient = new DiscordWebhookClient(discordWebhookUrl);
-            _webhookClient.MessageReceived += OnDiscordMessageReceived;
+            // Set up your BepInEx plugin here
             
-            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
-            Harmony harmony = new Harmony("com.bluetigeresw.valheimdiscordlink");
-            harmony.PatchAll();
+            // Initialize your Discord bot and webhook client here
+            _discordClient = new DiscordSocketClient();
+            _discordWebhookClient = new DiscordWebhookClient(_discordWebhookUrl);
+            _discordClient.MessageReceived += OnDiscordMessageReceived;
         }
 
-        [HarmonyPatch(typeof(Chat), "InputText")]
-        static class Chat_InputText_Patch
+        public void Start()
         {
-            static void Prefix(ref string text)
-            {
-                SendToDiscord(text);
-            }
+            // Connect to the Discord bot and start listening for messages
+            _discordClient.LoginAsync(Discord.TokenType.Bot, "your-bot-token");
+            _discordClient.StartAsync();
         }
 
-        private static async void SendToDiscord(string message)
+        public void Update()
         {
-            var payload = new Dictionary<string, string>
-            {
-                { "content", message }
-            };
-            var json = JsonConvert.SerializeObject(payload);
-            var stringContent = new StringContent(json, Encoding.UTF8, "applications/json");
-
-            await httpClient.PostAsync("https://discord.com/api/webhooks/1093329973324038234/3DVJ8AzfQsv8jV-pZX5S5brfmyOaneJkmJfCNatzu9AUHtbJY7Z8f2GQQnPjcdZ_BmS9", stringContent);
-        }
-
-        private async Task OnDiscordMessageReceived(Discord.Webhook.WebhookMessage message)
-        {
-            string username = message.Author.Username;
-            string content = message.Content;
-            DateTime timestamp = message.Timestamp;
-
-            string formattedMessage = $"[Discord] {username}: {content} ({timestamp})";
-            ZNet.instance.Broadcast(formattedMessage);
+            // Update your plugin logic here
         }
 
         public void OnDestroy()
         {
-            if (_webhookClient != null)
+            // Clean up your plugin resources here
+            _discordClient.StopAsync();
+        }
+
+        private async Task OnDiscordMessageReceived(SocketMessage message)
+        {
+            if (message.Channel.Name == _discordChannelName)
             {
-                _webhookClient.MessageReceived -= OnDiscordMessageReceived;
-                _webhookClient.Dispose();
-                _webhookClient = null;
+                // Handle incoming messages from the configured Discord channel
+                if (message.Content.ToLower() == "!players")
+                {
+                    // List players online
+                    // Send the player list to the Discord webhook channel
+                }
+                else if (message.Content.ToLower().StartsWith("!kick"))
+                {
+                    // Check if the user is an admin role
+                    // Kick the specified user in the Valheim server
+                }
+                else
+                {
+                    // Send the message to the Valheim server chat
+                }
             }
         }
 
+        private void OnValheimServerMessageReceived(string message)
+        {
+            // Handle incoming messages from the Valheim server
+            if (message.Contains("Player connected:"))
+            {
+                // Send a message to the Discord webhook channel when a player connects
+            }
+            else if (message.Contains("Player disconnected:"))
+            {
+                // Send a message to the Discord webhook channel when a player disconnects
+            }
+            else if (message.Contains("Server started"))
+            {
+                // Send a message to the Discord webhook channel when the server starts
+            }
+            else if (message.Contains("Server stopping"))
+            {
+                // Send a message to the Discord webhook channel when the server stops
+            }
+            else
+            {
+                // Send the message to the configured Discord channel
+                _discordWebhookClient.SendMessageAsync(message);
+            }
+        }
     }
 }
