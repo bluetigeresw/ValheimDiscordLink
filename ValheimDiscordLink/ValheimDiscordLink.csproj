@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>ValheimDiscordLink</RootNamespace>
+    <AssemblyName>com.bluetigeresw.valheimdiscordlink</AssemblyName>
+    <Description>Bridges ingame Valheim chat to Discord</Description>
+    <Version>1.0.0</Version>
+    <OutputType>Library</OutputType>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>../../BepInEx/plugins/ValheimDiscordLink</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx" Version="5.4.7" />
+    <PackageReference Include="BepInEx.ConfigurationManager" Version="5.4.0" />
+    <PackageReference Include="DiscordWebhook" Version="3.0.0" />
+    <PackageReference Include="IniParser" Version="3.0.6" />
+  </ItemGroup>
+
+</Project>
