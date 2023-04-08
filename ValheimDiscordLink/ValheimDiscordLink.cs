@@ -13,7 +13,7 @@
 13 
 14 namespace ValheimDiscordPlugin
 15 {
-16     [BepInPlugin("com.example.valheimdiscordplugin", "ValheimDiscordPlugin", "1.0.0")]
+16     [BepInPlugin("com.bluetigeresw.valheimdiscordlink", "ValheimDiscordLink", "1.0.0")]
 17     public class ValheimDiscordPlugin : BaseUnityPlugin
 18     {
 19         private DiscordSocketClient _discordClient;
@@ -109,7 +109,7 @@
 109                             }
 110                             else
 111                             {
-112                                 await message.Channel.SendMessageAsync("Invalid syntax. Usage: !kick <playername>");
+112                                 await message.Channel.SendMessageAsync("Invalid syntax. Usage: " + _commandPrefix + "kick <playername>");
 113                             }
 114                         }
 115                         else
