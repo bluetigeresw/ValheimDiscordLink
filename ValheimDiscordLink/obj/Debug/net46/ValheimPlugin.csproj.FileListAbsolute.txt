@@ -4,3 +4,9 @@
 /workspaces/ValheimDiscordLink/ValheimDiscordLink/obj/Debug/net46/ValheimPlugin.AssemblyInfoInputs.cache
 /workspaces/ValheimDiscordLink/ValheimDiscordLink/obj/Debug/net46/ValheimPlugin.AssemblyInfo.cs
 /workspaces/ValheimDiscordLink/ValheimDiscordLink/obj/Debug/net46/ValheimPlugin.csproj.CoreCompileInputs.cache
+C:\Users\eswwi\Desktop\Workspace\Github\ValheimDiscordLink\ValheimDiscordLink\obj\Debug\net46\ValheimPlugin.csproj.AssemblyReference.cache
+C:\Users\eswwi\Desktop\Workspace\Github\ValheimDiscordLink\ValheimDiscordLink\obj\Debug\net46\PluginInfo.cs
+C:\Users\eswwi\Desktop\Workspace\Github\ValheimDiscordLink\ValheimDiscordLink\obj\Debug\net46\ValheimPlugin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eswwi\Desktop\Workspace\Github\ValheimDiscordLink\ValheimDiscordLink\obj\Debug\net46\ValheimPlugin.AssemblyInfoInputs.cache
+C:\Users\eswwi\Desktop\Workspace\Github\ValheimDiscordLink\ValheimDiscordLink\obj\Debug\net46\ValheimPlugin.AssemblyInfo.cs
+C:\Users\eswwi\Desktop\Workspace\Github\ValheimDiscordLink\ValheimDiscordLink\obj\Debug\net46\ValheimPlugin.csproj.CoreCompileInputs.cache

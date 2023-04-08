@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/ValheimDiscordLink/ValheimDiscordLink/ValheimPlugin.csproj": {}
+    "c:\\Users\\eswwi\\Desktop\\Workspace\\Github\\ValheimDiscordLink\\ValheimDiscordLink\\ValheimPlugin.csproj": {}
   },
   "projects": {
-    "/workspaces/ValheimDiscordLink/ValheimDiscordLink/ValheimPlugin.csproj": {
+    "c:\\Users\\eswwi\\Desktop\\Workspace\\Github\\ValheimDiscordLink\\ValheimDiscordLink\\ValheimPlugin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/ValheimDiscordLink/ValheimDiscordLink/ValheimPlugin.csproj",
+        "projectUniqueName": "c:\\Users\\eswwi\\Desktop\\Workspace\\Github\\ValheimDiscordLink\\ValheimDiscordLink\\ValheimPlugin.csproj",
         "projectName": "com.bluetigeresw.valheimdiscordlink",
-        "projectPath": "/workspaces/ValheimDiscordLink/ValheimDiscordLink/ValheimPlugin.csproj",
-        "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/ValheimDiscordLink/ValheimDiscordLink/obj/",
+        "projectPath": "c:\\Users\\eswwi\\Desktop\\Workspace\\Github\\ValheimDiscordLink\\ValheimDiscordLink\\ValheimPlugin.csproj",
+        "packagesPath": "C:\\Users\\eswwi\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\eswwi\\Desktop\\Workspace\\Github\\ValheimDiscordLink\\ValheimDiscordLink\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/workspaces/ValheimDiscordLink/ValheimDiscordLink/NuGet.Config",
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
+          "c:\\Users\\eswwi\\Desktop\\Workspace\\Github\\ValheimDiscordLink\\ValheimDiscordLink\\NuGet.Config",
+          "C:\\Users\\eswwi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net46"
+          "net5.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.bepinex.dev/v3/index.json": {}
         },
         "frameworks": {
-          "net46": {
-            "targetAlias": "net46",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -37,56 +37,57 @@
         }
       },
       "frameworks": {
-        "net46": {
-          "targetAlias": "net46",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
-            "BepInEx.Analyzers": {
-              "suppressParent": "All",
+            "BepInEx": {
               "target": "Package",
-              "version": "[1.*, )"
+              "version": "[5.4.7, )"
             },
-            "BepInEx.Core": {
+            "BepInEx.ConfigurationManager": {
               "target": "Package",
-              "version": "[5.*, )"
+              "version": "[5.4.0, )"
             },
-            "BepInEx.PluginInfoProps": {
+            "DiscordWebhook": {
               "target": "Package",
-              "version": "[1.*, )"
+              "version": "[3.0.0, )"
             },
-            "Discord.Net": {
+            "IniParser": {
               "target": "Package",
-              "version": "[3.10.0, )"
-            },
-            "Harmony": {
-              "target": "Package",
-              "version": "[0.3.0, )"
-            },
-            "Microsoft.NETFramework.ReferenceAssemblies": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.0.2, )"
-            },
-            "Newtonsoft.json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            },
-            "UnityEngine": {
-              "target": "Package",
-              "version": "[5.6.1, )"
-            },
-            "UnityEngine.Modules": {
-              "include": "Compile",
-              "target": "Package",
-              "version": "[2020.3.46, )"
-            },
-            "Valheim.GameLibs": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[0.202.14-r.0, )"
+              "version": "[3.0.6, )"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/dotnet/7.0.201/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

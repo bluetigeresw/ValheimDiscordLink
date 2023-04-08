@@ -11,10 +11,11 @@
  using System.Reflection;
  using Nini.Config;
  
- namespace ValheimDiscordPlugin
+ namespace ValheimDiscordLink
  {
      [BepInPlugin("com.bluetigeresw.valheimdiscordlink", "ValheimDiscordLink", "1.0.0")]
-     public class ValheimDiscordPlugin : BaseUnityPlugin
+     [BepInProcess("valheim.exe")]
+     public class ValheimDiscordLink : BaseUnityPlugin
      {
          private DiscordSocketClient _discordClient;
          private DiscordWebhookClient _discordWebhookClient;

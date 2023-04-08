@@ -1,26 +1,49 @@
 {
   "version": 2,
-  "dgSpecHash": "51D1fGiTa/5kTMbnM0fQOi6bcIKXampFkS6Cq85VmD6sODCwR2GWwVyrKaABJjWrNmcoKjnWSlZ3wTS9vhSYxg==",
-  "success": true,
-  "projectFilePath": "/workspaces/ValheimDiscordLink/ValheimDiscordLink/ValheimPlugin.csproj",
+  "dgSpecHash": "IGw6KMQ78JW1GGBUphcsH3ypQediwvhpujEa3EExiz2B4Zu+iJSAIsq4rsO3P4Xp4XV7d7PfSXLATtbMN/jJvg==",
+  "success": false,
+  "projectFilePath": "c:\\Users\\eswwi\\Desktop\\Workspace\\Github\\ValheimDiscordLink\\ValheimDiscordLink\\ValheimPlugin.csproj",
   "expectedPackageFiles": [
-    "/home/codespace/.nuget/packages/bepinex.analyzers/1.0.8/bepinex.analyzers.1.0.8.nupkg.sha512",
-    "/home/codespace/.nuget/packages/bepinex.baselib/5.4.20/bepinex.baselib.5.4.20.nupkg.sha512",
-    "/home/codespace/.nuget/packages/bepinex.core/5.4.21/bepinex.core.5.4.21.nupkg.sha512",
-    "/home/codespace/.nuget/packages/bepinex.plugininfoprops/1.1.0/bepinex.plugininfoprops.1.1.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/discord.net/3.10.0/discord.net.3.10.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/harmony/0.3.0/harmony.0.3.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/harmonyx/2.7.0/harmonyx.2.7.0.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.2/microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
-    "/home/codespace/.nuget/packages/microsoft.netframework.referenceassemblies.net46/1.0.2/microsoft.netframework.referenceassemblies.net46.1.0.2.nupkg.sha512",
-    "/home/codespace/.nuget/packages/mono.cecil/0.11.4/mono.cecil.0.11.4.nupkg.sha512",
-    "/home/codespace/.nuget/packages/monomod.runtimedetour/21.12.13.1/monomod.runtimedetour.21.12.13.1.nupkg.sha512",
-    "/home/codespace/.nuget/packages/monomod.utils/21.12.13.1/monomod.utils.21.12.13.1.nupkg.sha512",
-    "/home/codespace/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
-    "/home/codespace/.nuget/packages/splat/1.6.2/splat.1.6.2.nupkg.sha512",
-    "/home/codespace/.nuget/packages/unityengine/5.6.1/unityengine.5.6.1.nupkg.sha512",
-    "/home/codespace/.nuget/packages/unityengine.modules/2020.3.46/unityengine.modules.2020.3.46.nupkg.sha512",
-    "/home/codespace/.nuget/packages/valheim.gamelibs/0.202.14-r.0/valheim.gamelibs.0.202.14-r.0.nupkg.sha512"
+    "C:\\Users\\eswwi\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\eswwi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\eswwi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package BepInEx. No packages exist with this id in source(s): BepInEx, nuget.org",
+      "libraryId": "BepInEx",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package BepInEx.ConfigurationManager. No packages exist with this id in source(s): BepInEx, nuget.org",
+      "libraryId": "BepInEx.ConfigurationManager",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package DiscordWebhook. No packages exist with this id in source(s): BepInEx, nuget.org",
+      "libraryId": "DiscordWebhook",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package IniParser with version (>= 3.0.6)\r\n  - Found 2 version(s) in nuget.org [ Nearest version: 1.0.1 ]\r\n  - Found 0 version(s) in BepInEx",
+      "libraryId": "IniParser",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

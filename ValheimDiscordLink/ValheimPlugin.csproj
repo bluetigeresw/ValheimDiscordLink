@@ -1,37 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>ValheimDiscordLink</RootNamespace>
     <AssemblyName>com.bluetigeresw.valheimdiscordlink</AssemblyName>
     <Description>Bridges ingame Valheim chat to Discord</Description>
     <Version>1.0.0</Version>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <LangVersion>latest</LangVersion>
+    <OutputType>Library</OutputType>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>../../BepInEx/plugins/ValheimDiscordLink</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
-    <PackageReference Include="BepInEx.Core" Version="5.*" />
-    <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
-    <PackageReference Include="Harmony" Version="0.3.0" />
-    <PackageReference Include="Newtonsoft.json" Version="13.0.3" />
-    <PackageReference Include="UnityEngine" Version="5.6.1" />
-    <PackageReference Include="UnityEngine.Modules" Version="2020.3.46" IncludeAssets="compile" />
-  </ItemGroup>
-  
-  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Discord.Net" Version="3.10.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-  <PackageReference Include="Valheim.GameLibs" Version="0.202.14-r.0">
-    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    <PrivateAssets>all</PrivateAssets>
-  </PackageReference>
+    <PackageReference Include="BepInEx" Version="5.4.7" />
+    <PackageReference Include="BepInEx.ConfigurationManager" Version="5.4.0" />
+    <PackageReference Include="DiscordWebhook" Version="3.0.0" />
+    <PackageReference Include="IniParser" Version="3.0.6" />
   </ItemGroup>
 
 </Project>
